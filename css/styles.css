@@ -150,14 +150,34 @@ address {
 }
 
 .site-cont .link {
-  display: block;
+  display: flex;
+  align-items:center;
   padding-top: 32px;
   padding-bottom: 32px;
 }
 
+.icon-envelope {
+  fill: currentColor;
+  margin-right: 10px;
+}
+
+
 /* Главная секция*/
 .main-name {
   background-color: #2f303a;
+  background-image: linear-gradient(
+    to right,
+    rgba(47, 48, 58, 0.4),
+    rgba(47, 48, 58, 0.4)
+  ), url(../images/Img-fon.jpg);
+  background-repeat: no-repeat;
+  background-position: center; 
+  height: 600px;
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-size: cover;
+  
   text-align: center;
   padding: 200px 0;
 }
@@ -198,6 +218,23 @@ address {
   width: 270px;
   
 }
+.item-icon {
+  display: flex;
+  /* outline: 2px solid tomato; */
+  justify-content: center;
+  align-items: center;
+  height: 120px;
+  background-color: var(--fon-btn-color);
+  margin-bottom: 30px;
+
+}
+.icon-name-bnf {
+  width: 70px;
+  height: 70px;
+}
+
+
+
 .benefits .item:not(:last-child) {
   margin-right: 30px;
 }
@@ -270,6 +307,80 @@ address {
   padding: 30px 0;
   text-align: center;
 }
+
+.social {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+.item-social .social-link {
+  color: #AFB1B8;
+}
+.icon-social {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+  
+}
+.social .item-social:not(:last-child) {
+  margin-right: 10px;
+}
+.icon-border {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;   
+  border-radius: 50%;
+  
+}
+.icon-social:hover {
+  color: var(--primary-bg-color);
+}
+
+.icon-border:hover {
+  background-color: var(--accent-color);
+}
+
+
+/*Постоянные клиенты*/
+
+.clients {
+  display: flex;
+}
+.clients-link {
+  color: #AFB1B8;
+  
+}
+.icon-name {
+  width: 106px;
+  height: 60px;
+  fill: currentColor;
+  
+}
+.clients-link .icon-name:hover {
+  color: var(--accent-color);
+}
+
+
+.clients-border {
+  width: 170px;
+  height: 92px;
+  border-radius: 4px;
+  padding: 16px 32px;
+  border: 2px solid var(--color-border-buttom);
+}
+
+.clients-border:hover {
+  border: 2px solid var(--accent-color);
+  padding: 16px 32px;
+}
+
+.clients .item:not(:last-child) {
+  margin-right: 30px;
+}
+
 
 
 /*footer*/
