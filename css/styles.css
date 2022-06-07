@@ -315,7 +315,14 @@ address {
 }
 
 .item-social .social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;   
+  border-radius: 50%;
   color: #AFB1B8;
+  /* outline: 2px solid tomato; */
 }
 .icon-social {
   width: 20px;
@@ -326,22 +333,13 @@ address {
 .social .item-social:not(:last-child) {
   margin-right: 10px;
 }
-.icon-border {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 44px;
-  height: 44px;   
-  border-radius: 50%;
-  
-}
-.icon-social:hover {
-  color: var(--primary-bg-color);
-}
 
-.icon-border:hover {
+.icon-social:hover, .icon-social:focus, 
+.social-link:hover, .social-link:focus {
+  color: var(--primary-bg-color);
   background-color: var(--accent-color);
 }
+
 
 
 /*Постоянные клиенты*/
@@ -350,6 +348,13 @@ address {
   display: flex;
 }
 .clients-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 92px;
+  border-radius: 4px;
+  border: 2px solid var(--color-border-buttom);
   color: #AFB1B8;
   
 }
@@ -359,18 +364,22 @@ address {
   fill: currentColor;
   
 }
-.clients-link .icon-name:hover {
+
+.clients-link .icon-name:hover, 
+.clients-link .icon-name:focus, 
+.clients-link:hover, .clients-link:focus {
   color: var(--accent-color);
+  border-color: var(--accent-color);
 }
 
 
-.clients-border {
+/* .clients-border {
   width: 170px;
   height: 92px;
   border-radius: 4px;
   padding: 16px 32px;
   border: 2px solid var(--color-border-buttom);
-}
+} */
 
 .clients-border:hover {
   border: 2px solid var(--accent-color);
@@ -444,9 +453,6 @@ address {
 }
 
 .soc-fut {
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
   margin-left: 70px;
 }
 .social-border {
@@ -462,7 +468,7 @@ address {
 .fut-list .item-fut:not(:last-child) {
   margin-right: 10px;
 }
-.social-border:hover {
+.social-border:hover, .social-border:focus {
   background-color: var(--accent-color);
 }
 
@@ -580,8 +586,11 @@ address {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-
-.shadow:hover {
+.shadow {
+  display: block;
+}
+.shadow:hover,
+.shadow:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
